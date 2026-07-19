@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model TrendingTrack {
+  id          String   @id @default(cuid())
+  appleId     String
+  type        String   // "songs" or "albums"
+  name        String
+  artistName  String
+  artistId    String?
+  artistUrl   String?
+  artworkUrl  String?
+  url         String?
+  releaseDate String?
+  genreIds    String[]
+  genreNames  String[]
+  explicit    Boolean  @default(false)
+  rank        Int
+  countryCode String
+  fetchedAt   DateTime @default(now())
+
+  @@index([countryCode, type, fetchedAt])
+  @@index([appleId])
+  @@map("trending_tracks")
+}
+
+model BlogArticle {
+  id           Int      @id @default(autoincrement())
+  appleId      String?
+  type         String?  // "songs" or "albums"
+  title        String
+  artistName   String
+  artworkUrl   String?
+  streamCount  BigInt?
+  countryCount Int?
+  weekOf       DateTime
+  editorialFr  String   @db.Text
+  editorialEn  String   @db.Text
+  published    Boolean  @default(true)
+  createdAt    DateTime @default(now())
+
+  @@map("blog_articles")
+}
