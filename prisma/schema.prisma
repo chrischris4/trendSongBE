@@ -7,10 +7,21 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum BlogArticleFormat {
+  SIMPLE
+  SUGGESTION
+  TOP_10
+  GUIDE
+  DATA_ANALYSIS
+  FACE_TO_FACE
+  PORTRAIT
+  RETROSPECTIVE
+}
+
 model TrendingTrack {
   id          String   @id @default(cuid())
   appleId     String
-  type        String   // "songs" or "albums"
+  type        String // "songs" or "albums"
   name        String
   artistName  String
   artistId    String?
@@ -31,19 +42,49 @@ model TrendingTrack {
 }
 
 model BlogArticle {
-  id           Int      @id @default(autoincrement())
+  id           Int               @id @default(autoincrement())
+  format       BlogArticleFormat @default(SIMPLE)
   appleId      String?
-  type         String?  // "songs" or "albums"
+  type         String? // "songs" or "albums"
   title        String
+  titleFr      String?
+  titleEn      String?
   artistName   String
   artworkUrl   String?
   streamCount  BigInt?
   countryCount Int?
   weekOf       DateTime
-  editorialFr  String   @db.Text
-  editorialEn  String   @db.Text
-  published    Boolean  @default(true)
-  createdAt    DateTime @default(now())
+  editorialFr  String            @db.Text
+  editorialEn  String            @db.Text
+  introFr      String?           @db.Text
+  introEn      String?           @db.Text
+  conclusionFr String?           @db.Text
+  conclusionEn String?           @db.Text
+  published    Boolean           @default(true)
+  createdAt    DateTime          @default(now())
+  items        BlogArticleItem[]
 
   @@map("blog_articles")
+}
+
+model BlogArticleItem {
+  id             Int         @id @default(autoincrement())
+  articleId      Int
+  position       Int
+  appleId        String?
+  type           String?
+  title          String
+  artistName     String
+  artworkUrl     String?
+  streamCount    BigInt?
+  countryCount   Int?
+  sectionTitleFr String?
+  sectionTitleEn String?
+  sectionTextFr  String?     @db.Text
+  sectionTextEn  String?     @db.Text
+  article        BlogArticle @relation(fields: [articleId], references: [id], onDelete: Cascade)
+
+  @@unique([articleId, position])
+  @@index([appleId])
+  @@map("blog_article_items")
 }
