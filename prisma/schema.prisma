@@ -38,6 +38,9 @@ model TrendingTrack {
 
   @@index([countryCode, type, fetchedAt])
   @@index([appleId])
+  // La recherche du dernier relevé trie sur fetchedAt sans filtrer : l'index
+  // composite ci-dessus ne peut pas la servir.
+  @@index([fetchedAt])
   @@map("trending_tracks")
 }
 

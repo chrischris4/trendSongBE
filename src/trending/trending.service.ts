@@ -4,6 +4,11 @@ import { PrismaService } from '../prisma/prisma.service';
 import { MusicService } from '../music/music.service';
 import { COUNTRIES, COUNTRY_CODES } from '../countries/countries.data';
 
+// Fenetre d'historique conservee. 90 jours permettent des analyses d'evolution
+// sur un trimestre glissant pour ~1 $/mois de stockage supplementaire ; les
+// articles publies survivent de toute facon a la purge.
+const RETENTION_DAYS = 90;
+
 const CACHE_TTL = 60 * 60 * 1000;
 const SYNC_CHUNK = 3;
 
@@ -63,7 +68,7 @@ export class TrendingService implements OnModuleInit {
   }
 
   private async cleanOld() {
-    const cutoff = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+    const cutoff = new Date(Date.now() - RETENTION_DAYS * 24 * 60 * 60 * 1000);
     const { count } = await this.prisma.trendingTrack.deleteMany({ where: { fetchedAt: { lt: cutoff } } });
     if (count > 0) this.logger.log(`${count} anciennes entrées supprimées`);
   }
