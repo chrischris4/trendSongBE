@@ -1,0 +1,435 @@
+[
+  {
+    "format": "DATA_ANALYSIS",
+    "titleFr": "Ariana Grande occupe une ligne de classement sur douze",
+    "titleEn": "Ariana Grande Holds One Chart Line in Twelve",
+    "introFr": "Le relevé du 9 août 2026 rassemble 3 200 lignes de classement de morceaux, soit les cent premières places de trente-deux pays. Sur ce total, 242 lignes portent le nom d'Ariana Grande, soit 8 % de l'ensemble. La deuxième artiste du tableau, Olivia Rodrigo, en compte 85. Aucune autre chanteuse ou aucun autre chanteur n'a jamais approché ce niveau dans les relevés que nous conservons, et la raison n'est pas seulement le succès d'un morceau.",
+    "introEn": "The 9 August 2026 snapshot gathers 3,200 song chart lines, meaning the top hundred positions in thirty-two countries. Of that total, 242 lines carry Ariana Grande's name, or 8 % of everything. The second-placed artist, Olivia Rodrigo, holds 85. No other artist has come close to that level in the snapshots we keep, and the reason is not simply that one song worked.",
+    "conclusionFr": "Le mécanisme derrière ces 242 lignes tient en une phrase : un album sorti le 31 juillet dont chaque piste entre séparément au classement des morceaux. Apple Music ne classe pas les albums et les titres dans le même tableau, mais un album écouté en entier pousse simultanément dix ou douze pistes dans le classement des morceaux de chaque pays où il fonctionne. Multipliez par trente pays et vous obtenez mécaniquement plusieurs centaines de lignes. Le Brésil offre la démonstration la plus nette du phénomène : six des dix premières places du pays sont occupées par le même album, avec des morceaux qui n'ont fait l'objet d'aucune promotion individuelle. Cette domination a une durée de vie courte et prévisible. Passé le premier mois d'écoute, les pistes secondaires disparaissent et il ne reste que les deux ou trois titres réellement adoptés. Le classement du mois prochain dira lesquels. Pour l'instant, le chiffre à retenir est ailleurs : 8 % d'un classement mondial pour une seule artiste, c'est le signe d'un marché où l'écoute d'album n'a jamais disparu, contrairement à ce que raconte depuis dix ans le récit sur la mort du format.",
+    "conclusionEn": "The mechanism behind those 242 lines fits in one sentence: an album released on 31 July whose every track enters the song chart separately. Apple Music does not rank albums and tracks in the same table, but an album played end to end pushes ten or twelve tracks into the song chart of every country where it works, all at once. Multiply that by thirty countries and several hundred lines follow mechanically. Brazil provides the clearest demonstration: six of the country's top ten places are held by the same album, with tracks that received no individual promotion whatsoever. This kind of dominance has a short and predictable life. Once the first month of listening is over, the secondary tracks vanish and only the two or three genuinely adopted songs remain. Next month's chart will say which. For now, the number worth keeping is elsewhere: 8 % of a global chart held by one artist is the sign of a market where album listening never disappeared, contrary to a story the industry has been telling itself for ten years.",
+    "items": [
+      {
+        "position": 1,
+        "appleId": "1895420989",
+        "type": "albums",
+        "title": "petal",
+        "artistName": "Ariana Grande",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7e/e6/82/7ee682bd-1b17-6adc-be63-b5af1bdff369/26UMGIM51126.rgb.jpg/100x100bb.jpg",
+        "countryCount": 32,
+        "sectionTitleFr": "L'album : présent dans les 32 pays suivis",
+        "sectionTitleEn": "The Album: Present in All 32 Tracked Countries",
+        "sectionTextFr": "Sorti le 31 juillet 2026, l'album figure au classement des trente-deux pays que nous suivons, sans exception, avec un rang moyen de 1,9. Aucune autre sortie du relevé n'obtient une couverture totale, et aucune n'approche ce rang moyen. Le deuxième album du classement mondial, celui d'Olivia Rodrigo, couvre trente et un pays avec un rang moyen de 6,4. L'écart entre 1,9 et 6,4 paraît minime : il correspond en réalité à la différence entre être premier partout et être premier nulle part.",
+        "sectionTextEn": "Released on 31 July 2026, the album appears in the charts of all thirty-two countries we track, without exception, with an average rank of 1.9. No other release in the snapshot achieves total coverage, and none comes close to that average rank. The second album in the global ranking, Olivia Rodrigo's, covers thirty-one countries with an average rank of 6.4. The gap between 1.9 and 6.4 looks small: it is in fact the difference between being first everywhere and being first nowhere."
+      },
+      {
+        "position": 2,
+        "appleId": "6763656876",
+        "type": "songs",
+        "title": "hate that i made you love me",
+        "artistName": "Ariana Grande",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7e/e6/82/7ee682bd-1b17-6adc-be63-b5af1bdff369/26UMGIM51126.rgb.jpg/100x100bb.jpg",
+        "countryCount": 30,
+        "sectionTitleFr": "Le morceau le plus mondial du relevé",
+        "sectionTitleEn": "The Most Global Song in the Snapshot",
+        "sectionTextFr": "Classé dans trente pays avec un rang moyen de 13,9, ce titre est le morceau le mieux implanté du relevé : à égalité de couverture avec la piste titre de l'album, mais loin devant elle au rang moyen, et devant Dai Dai de Shakira et Burna Boy qui couvre vingt-cinq pays. Sorti le 28 mai, il précède l'album de deux mois, ce qui explique son avance sur les autres pistes : il a eu le temps de s'installer avant que le reste du disque n'arrive.",
+        "sectionTextEn": "Charting in thirty countries with an average rank of 13.9, this track is the best-established song in the snapshot: level with the album's title track on coverage but far ahead of it on average rank, and ahead of Shakira and Burna Boy's Dai Dai, which covers twenty-five countries. Released on 28 May, it precedes the album by two months, which explains its lead over the other tracks: it had time to settle before the rest of the record arrived."
+      },
+      {
+        "position": 3,
+        "appleId": "6763656878",
+        "type": "songs",
+        "title": "petal",
+        "artistName": "Ariana Grande",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7e/e6/82/7ee682bd-1b17-6adc-be63-b5af1bdff369/26UMGIM51126.rgb.jpg/100x100bb.jpg",
+        "countryCount": 30,
+        "sectionTitleFr": "Trente pays, un rang moyen de 19",
+        "sectionTitleEn": "Thirty Countries, an Average Rank of 19",
+        "sectionTextFr": "Le morceau qui donne son nom à l'album couvre le même nombre de pays que le précédent mais avec un rang moyen de 19 au lieu de 13,9. Il est premier au Brésil, huitième au Royaume-Uni, onzième aux États-Unis et seizième en Allemagne. Cette dispersion est normale pour une piste titre : elle bénéficie de la curiosité liée au nom de l'album partout, sans avoir été travaillée en radio nulle part.",
+        "sectionTextEn": "The track that gives the album its name covers the same number of countries as the previous one, but with an average rank of 19 instead of 13.9. It is first in Brazil, eighth in the United Kingdom, eleventh in the United States and sixteenth in Germany. That spread is normal for a title track: it benefits everywhere from the curiosity attached to the album's name, without having been worked at radio anywhere."
+      },
+      {
+        "position": 4,
+        "appleId": "6763656871",
+        "type": "songs",
+        "title": "kiss me",
+        "artistName": "Ariana Grande",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7e/e6/82/7ee682bd-1b17-6adc-be63-b5af1bdff369/26UMGIM51126.rgb.jpg/100x100bb.jpg",
+        "countryCount": 24,
+        "sectionTitleFr": "La preuve par la piste secondaire",
+        "sectionTitleEn": "The Proof Lies in the Secondary Track",
+        "sectionTextFr": "Vingt-quatre pays et un rang moyen de 45,6 : ce titre n'a jamais été un single, il n'a fait l'objet d'aucun clip ni d'aucune campagne, et il figure malgré tout dans les trois quarts des classements nationaux que nous suivons. C'est la ligne la plus révélatrice de l'ensemble, parce qu'elle ne peut s'expliquer que par une chose : des gens qui écoutent l'album en entier, dans l'ordre, dans vingt-quatre pays différents.",
+        "sectionTextEn": "Twenty-four countries and an average rank of 45.6: this track was never a single, it had no video and no campaign, and it still appears in three quarters of the national charts we track. It is the most revealing line in the whole set, because only one thing explains it: people listening to the album end to end, in order, in twenty-four different countries."
+      }
+    ]
+  },
+  {
+    "format": "FACE_TO_FACE",
+    "titleFr": "Anitta contre Ariana Grande : qui tient vraiment le classement brésilien",
+    "titleEn": "Anitta vs Ariana Grande: Who Really Holds the Brazilian Chart",
+    "introFr": "Le top dix brésilien du 9 août 2026 n'appartient qu'à deux artistes. Ariana Grande occupe six places, Anitta quatre, et aucun autre nom n'apparaît avant la onzième position. Les deux blocs viennent chacun d'un album sorti à huit jours d'intervalle, l'un le 23 juillet, l'autre le 31. La comparaison est donc presque expérimentale : même pays, même fenêtre, même mécanique de sortie, deux stratégies opposées.",
+    "introEn": "The Brazilian top ten on 9 August 2026 belongs to just two artists. Ariana Grande holds six places, Anitta four, and no other name appears before eleventh position. Each block comes from an album released eight days apart, one on 23 July, the other on 31 July. The comparison is therefore almost experimental: same country, same window, same release mechanics, two opposite strategies.",
+    "conclusionFr": "Les deux artistes obtiennent le même résultat au Brésil par des chemins opposés, et c'est ailleurs que le match se décide. Ariana Grande occupe six places brésiliennes avec un album qui occupe aussi les trente et un autres pays du relevé : le Brésil n'est pour elle qu'un marché parmi trente-deux, et sa domination locale est un effet secondaire d'une sortie mondiale. Anitta occupe quatre places avec un album dont une seule piste franchit la frontière, et seulement jusqu'à la soixante-septième place portugaise. Chacune de ses quatre entrées est une collaboration avec un artiste brésilien différent, ce qui est exactement le contraire d'une stratégie d'exportation : c'est un disque construit pour être irremplaçable chez lui. Les deux approches ont un coût. La première produit des positions qui s'effondreront partout en même temps quand la curiosité retombera. La seconde produit une place que personne d'autre ne peut prendre, sur un seul territoire, sans aucune retombée hors des frontières. Sur les 3 200 lignes du relevé mondial, Ariana Grande en tient 242 et Anitta une poignée. Au Brésil, ce chiffre ne veut plus rien dire.",
+    "conclusionEn": "The two artists reach the same result in Brazil by opposite routes, and the match is decided elsewhere. Ariana Grande holds six Brazilian places with an album that also occupies the other thirty-one countries in the snapshot: Brazil is one market among thirty-two for her, and her local dominance is a side effect of a global release. Anitta holds four places with an album whose only track to cross a border does so at sixty-seventh place in Portugal. Each of her four entries is a collaboration with a different Brazilian artist, which is the exact opposite of an export strategy: it is a record built to be irreplaceable at home. Both approaches have a cost. The first produces positions that will collapse everywhere at once when curiosity fades. The second produces a place nobody else can take, on a single territory, with no spillover across any border. Of the 3,200 lines in the global snapshot, Ariana Grande holds 242 and Anitta a handful. In Brazil, that number stops meaning anything.",
+    "items": [
+      {
+        "position": 1,
+        "appleId": "6763656878",
+        "type": "songs",
+        "title": "petal",
+        "artistName": "Ariana Grande",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7e/e6/82/7ee682bd-1b17-6adc-be63-b5af1bdff369/26UMGIM51126.rgb.jpg/100x100bb.jpg",
+        "countryCount": 30,
+        "sectionTitleFr": "Six places sur dix, sans une seule référence locale",
+        "sectionTitleEn": "Six Places Out of Ten, Without a Single Local Reference",
+        "sectionTextFr": "Premier au Brésil, ce titre est suivi de cinq autres pistes du même album aux deuxième, septième, huitième, neuvième et dixième places. Aucune n'a été enregistrée pour le marché brésilien, aucune ne comporte de featuring local, aucune n'est chantée en portugais. La domination repose entièrement sur l'écoute intégrale d'un disque sorti neuf jours plus tôt, et ce même disque tient simultanément le haut du classement dans trente autres pays.",
+        "sectionTextEn": "First in Brazil, this track is followed by five more from the same album in second, seventh, eighth, ninth and tenth place. None was recorded for the Brazilian market, none features a local artist, none is sung in Portuguese. The dominance rests entirely on people playing a record released nine days earlier from start to finish, and that same record simultaneously holds the top of the chart in thirty other countries."
+      },
+      {
+        "position": 2,
+        "appleId": "6793770624",
+        "type": "songs",
+        "title": "Sal Grosso",
+        "artistName": "Anitta & KBrum",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3a/bf/6a/3abf6a92-7a22-5cdb-209b-54f2e38cf623/26UMGIM96099.rgb.jpg/100x100bb.jpg",
+        "sectionTitleFr": "Quatre places, quatre invités brésiliens différents",
+        "sectionTitleEn": "Four Places, Four Different Brazilian Guests",
+        "sectionTextFr": "Troisième au Brésil, ce morceau ouvre une série de quatre titres sortis le 23 juillet et classés d'affilée aux troisième, quatrième, cinquième et sixième places. Chacun est crédité avec un invité différent : KBrum ici, puis Los Brasileros, Alceu Valença et Mart'nália. Faire appel à quatre artistes locaux sur quatre pistes consécutives est un choix coûteux en négociation et sans intérêt hors du pays. Il produit en revanche exactement ce qu'on lui demande : un bloc que personne à l'étranger ne peut concurrencer sur ce terrain.",
+        "sectionTextEn": "Third in Brazil, this track opens a run of four songs released on 23 July and charting consecutively in third, fourth, fifth and sixth place. Each is credited with a different guest: KBrum here, then Los Brasileros, Alceu Valença and Mart'nália. Bringing in four local artists across four consecutive tracks is expensive to negotiate and worthless outside the country. In exchange it delivers exactly what it is asked to: a block nobody from abroad can compete with on this ground."
+      }
+    ]
+  },
+  {
+    "format": "TOP_10",
+    "titleFr": "Le top 10 mexicain ne contient pas un seul titre sorti en 2026",
+    "titleEn": "The Mexican Top 10 Does Not Contain a Single Song Released in 2026",
+    "introFr": "Le classement mexicain du 9 août 2026 présente une anomalie que ne partage aucun des trente et un autres pays du relevé : ses dix premières places sont occupées par des morceaux sortis entre 2021 et 2025, sans une seule nouveauté de l'année en cours. À titre de comparaison, 39 % de l'ensemble des lignes du relevé mondial datent de 2026. Voici ce top dix, dans l'ordre, avec sa date de sortie.",
+    "introEn": "The Mexican chart on 9 August 2026 shows an anomaly none of the other thirty-one countries in the snapshot shares: its top ten places are held by songs released between 2021 and 2025, without a single release from the current year. For comparison, 39 % of all lines in the global snapshot date from 2026. Here is that top ten, in order, with each release date.",
+    "conclusionFr": "Deux explications se combinent, et aucune des deux n'est un accident. La première est la concentration : trois artistes seulement se partagent huit des dix places, Fuerza Regida en tenant quatre à eux seuls. Un marché aussi concentré tourne lentement, parce qu'il faut qu'un de ces trois noms sorte quelque chose pour que le classement bouge. La seconde est la nature du corridos tumbados, le genre qui domine ce tableau : il fonctionne sur des morceaux qui s'installent pendant des mois, portés par des écoutes répétées plutôt que par une campagne de lancement. Comparez avec le Brésil, où six des dix premières places datent de moins de trois semaines, ou avec le Royaume-Uni, dont le numéro un est sorti en septembre 2025 mais dont le reste du tableau bouge chaque semaine. Le Mexique est le seul pays du relevé où le classement de la semaine est presque identique à celui du mois précédent. Cela ne signifie pas que le pays écoute moins de nouveautés. Cela signifie que ses nouveautés doivent battre des titres installés depuis trois ans, et que très peu y parviennent.",
+    "conclusionEn": "Two explanations combine, and neither is an accident. The first is concentration: three artists alone share eight of the ten places, with Fuerza Regida holding four by themselves. A market this concentrated turns over slowly, because one of those three names has to release something for the chart to move. The second is the nature of corridos tumbados, the genre dominating this table: it works through songs that settle in over months, carried by repeat listening rather than by a launch campaign. Compare with Brazil, where six of the top ten places are less than three weeks old, or with the United Kingdom, whose number one dates from September 2025 but whose remaining table shifts every week. Mexico is the only country in the snapshot whose weekly chart is almost identical to the previous month's. That does not mean the country listens to fewer new releases. It means its new releases have to beat songs that have been installed for three years, and very few manage it.",
+    "items": [
+      {
+        "position": 1,
+        "appleId": "1804142885",
+        "type": "songs",
+        "title": "TU SANCHO",
+        "artistName": "Fuerza Regida",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/51/0a/a3/510aa39f-7a41-b53c-70a0-6a0df60645bb/196872995978.jpg/100x100bb.jpg",
+        "sectionTitleFr": "1. Sorti le 2 mai 2025",
+        "sectionTitleEn": "1. Released 2 May 2025",
+        "sectionTextFr": "Quinze mois après sa sortie, ce titre est toujours numéro un au Mexique. C'est la plus longue tenue au sommet de tout le relevé mondial, aucun autre pays n'ayant un premier de classement aussi ancien. Il appartient à l'album dont proviennent également les sixième et neuvième places de ce même tableau.",
+        "sectionTextEn": "Fifteen months after release, this track is still number one in Mexico. That is the longest run at the top anywhere in the global snapshot, no other country having a chart leader this old. It comes from the album that also supplies the sixth and ninth places in this same table."
+      },
+      {
+        "position": 2,
+        "appleId": "6796842545",
+        "type": "songs",
+        "title": "Te Estoy Correteando",
+        "artistName": "LATIN MAFIA & Fred again..",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/90/52/6e/90526e94-89c7-8387-458f-1972f7995d48/1200214495824.jpg/100x100bb.jpg",
+        "sectionTitleFr": "2. Sorti le 19 décembre 2025",
+        "sectionTitleEn": "2. Released 19 December 2025",
+        "sectionTextFr": "Le titre le plus récent du top dix mexicain a près de huit mois. C'est aussi la seule collaboration du tableau associant un groupe mexicain à un producteur britannique, et la seule entrée classée en musique électronique plutôt qu'en musique latine.",
+        "sectionTextEn": "The most recent track in the Mexican top ten is nearly eight months old. It is also the only collaboration in the table pairing a Mexican group with a British producer, and the only entry filed under electronic music rather than Latin."
+      },
+      {
+        "position": 3,
+        "appleId": "1814146675",
+        "type": "songs",
+        "title": "SUPERESTRELLA",
+        "artistName": "Aitana",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/43/08/06/430806b8-3b40-649f-37e9-37ff2ab702df/25UMGIM52016.rgb.jpg/100x100bb.jpg",
+        "sectionTitleFr": "3. Sorti le 29 mai 2025",
+        "sectionTitleEn": "3. Released 29 May 2025",
+        "sectionTextFr": "Seule artiste espagnole du top dix mexicain, et seule femme. Le morceau est également deuxième en Espagne, ce qui en fait l'une des rares entrées du tableau à exister dans plus d'un pays. Quatorze mois après sa sortie, il tient les deux marchés simultanément.",
+        "sectionTextEn": "The only Spanish artist in the Mexican top ten, and the only woman. The song is also second in Spain, which makes it one of the few entries in this table to exist in more than one country. Fourteen months after release, it holds both markets at once."
+      },
+      {
+        "position": 4,
+        "appleId": "1712363845",
+        "type": "songs",
+        "title": "EXCESOS",
+        "artistName": "Fuerza Regida",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/21/e3/b7/21e3b74f-571b-07ce-567b-a2aa8274c7b2/196871548922.jpg/100x100bb.jpg",
+        "sectionTitleFr": "4. Sorti le 20 octobre 2023",
+        "sectionTitleEn": "4. Released 20 October 2023",
+        "sectionTextFr": "Presque trois ans au classement, et toujours dans les cinq premiers. C'est la troisième entrée la plus ancienne du tableau, derrière Yonaguni et Efecto. Le groupe place ici son deuxième titre sur quatre, tous issus de projets différents, ce qui écarte l'hypothèse d'un simple effet d'album.",
+        "sectionTextEn": "Almost three years in the chart, and still in the top five. It is the third oldest entry in the table, behind Yonaguni and Efecto. The group places its second of four songs here, all from different projects, which rules out any simple album effect."
+      },
+      {
+        "position": 5,
+        "appleId": "1570323056",
+        "type": "songs",
+        "title": "Yonaguni",
+        "artistName": "Bad Bunny",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b6/12/da/b612daba-6c68-c2ab-7492-fb2e079074d5/196006829308.jpg/100x100bb.jpg",
+        "sectionTitleFr": "5. Sorti le 4 juin 2021",
+        "sectionTitleEn": "5. Released 4 June 2021",
+        "sectionTextFr": "Cinq ans au compteur, cinquième place au Mexique et dixième en Espagne. C'est le titre le plus ancien du top dix mexicain, et il figure encore dans six classements nationaux cinq ans après sa sortie, dont quatre top dix : Chili et Colombie à la deuxième place, Mexique à la cinquième, Espagne à la dixième.",
+        "sectionTextEn": "Five years old, fifth in Mexico and tenth in Spain. It is the oldest track in the Mexican top ten, and it still appears in six national charts five years after release, four of them top tens: second in Chile and Colombia, fifth in Mexico, tenth in Spain."
+      },
+      {
+        "position": 6,
+        "appleId": "1804142886",
+        "type": "songs",
+        "title": "Marlboro Rojo",
+        "artistName": "Fuerza Regida",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/51/0a/a3/510aa39f-7a41-b53c-70a0-6a0df60645bb/196872995978.jpg/100x100bb.jpg",
+        "sectionTitleFr": "6. Sorti le 2 mai 2025",
+        "sectionTitleEn": "6. Released 2 May 2025",
+        "sectionTextFr": "Même date que le numéro un, même album, quinze mois plus tard. Deux pistes du même disque tiennent la première et la sixième place du pays simultanément, ce qui ne se produit dans aucun autre classement national du relevé pour un album de plus d'un an.",
+        "sectionTextEn": "Same date as the number one, same album, fifteen months later. Two tracks from one record hold first and sixth place in the country at once, something no other national chart in the snapshot shows for an album more than a year old."
+      },
+      {
+        "position": 7,
+        "appleId": "1783250950",
+        "type": "songs",
+        "title": "gervonta",
+        "artistName": "Peso Pluma",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/39/ed/a6/39eda6fa-33fc-76da-238e-454c5ad8b73c/199066114025.jpg/100x100bb.jpg",
+        "sectionTitleFr": "7. Sorti le 5 décembre 2024",
+        "sectionTitleEn": "7. Released 5 December 2024",
+        "sectionTextFr": "Vingt mois de classement pour le premier des deux titres de Peso Pluma présents dans ce tableau. Avec Fuerza Regida et Bad Bunny, il complète le trio d'artistes qui se partagent huit des dix premières places du pays.",
+        "sectionTextEn": "Twenty months in the chart for the first of Peso Pluma's two entries in this table. Together with Fuerza Regida and Bad Bunny, he completes the trio of artists sharing eight of the country's top ten places."
+      },
+      {
+        "position": 8,
+        "appleId": "1622045954",
+        "type": "songs",
+        "title": "Efecto",
+        "artistName": "Bad Bunny",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3e/04/eb/3e04ebf6-370f-f59d-ec84-2c2643db92f1/196626945068.jpg/100x100bb.jpg",
+        "sectionTitleFr": "8. Sorti le 6 mai 2022",
+        "sectionTitleEn": "8. Released 6 May 2022",
+        "sectionTextFr": "Quatre ans au classement pour le second titre de Bad Bunny dans ce tableau. L'artiste portoricain est le seul non-Mexicain du trio dominant, et ses deux entrées datent de 2021 et 2022, soit avant l'explosion commerciale du genre qui occupe le reste du classement.",
+        "sectionTextEn": "Four years in the chart for Bad Bunny's second entry here. The Puerto Rican artist is the only non-Mexican in the dominant trio, and both his entries date from 2021 and 2022, that is, before the commercial explosion of the genre occupying the rest of the table."
+      },
+      {
+        "position": 9,
+        "appleId": "1804142884",
+        "type": "songs",
+        "title": "ANSIEDAD",
+        "artistName": "Fuerza Regida",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/51/0a/a3/510aa39f-7a41-b53c-70a0-6a0df60645bb/196872995978.jpg/100x100bb.jpg",
+        "sectionTitleFr": "9. Sorti le 2 mai 2025",
+        "sectionTitleEn": "9. Released 2 May 2025",
+        "sectionTextFr": "Troisième piste du même album du 2 mai 2025 à figurer dans ce top dix, après la première et la sixième place. Quinze mois après sa sortie, ce disque occupe donc à lui seul trois des dix meilleures positions du pays.",
+        "sectionTextEn": "The third track from that same 2 May 2025 album to appear in this top ten, after first and sixth place. Fifteen months after release, that one record therefore holds three of the country's ten best positions on its own."
+      },
+      {
+        "position": 10,
+        "appleId": "1748016028",
+        "type": "songs",
+        "title": "HOLLYWOOD",
+        "artistName": "Peso Pluma & Estevan Plazola",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3d/e9/65/3de9651e-fe11-0525-7eee-762861af1152/198391808319.jpg/100x100bb.jpg",
+        "sectionTitleFr": "10. Sorti le 20 juin 2024",
+        "sectionTitleEn": "10. Released 20 June 2024",
+        "sectionTextFr": "Vingt-six mois de classement pour fermer ce top dix. Additionnées, les dix entrées de ce tableau totalisent plus de vingt et une années d'ancienneté cumulée, soit une moyenne de vingt-six mois par titre. Aucun autre pays du relevé n'approche ce chiffre.",
+        "sectionTextEn": "Twenty-six months in the chart to close this top ten. Added together, the ten entries in this table total more than twenty-one years of accumulated age, an average of twenty-six months per song. No other country in the snapshot comes close to that figure."
+      }
+    ]
+  },
+  {
+    "format": "GUIDE",
+    "titleFr": "Comment repérer un morceau qui va franchir les frontières",
+    "titleEn": "How to Spot a Song That Will Cross Borders",
+    "introFr": "Sur les 3 200 lignes du relevé du 9 août 2026, l'immense majorité des morceaux n'apparaissent que dans un seul pays. Une poignée en couvre plus de vingt. Entre les deux, il existe des profils intermédiaires très lisibles, à condition de savoir quoi regarder. Ce guide prend cinq morceaux du relevé, du plus mondial au strictement local, et explique à chaque étage le signal qui permet de prédire jusqu'où un titre ira.",
+    "introEn": "Of the 3,200 lines in the 9 August 2026 snapshot, the vast majority of songs appear in a single country. A handful cover more than twenty. Between the two, there are intermediate profiles that are perfectly readable, provided you know what to look at. This guide takes five songs from the snapshot, from the most global to the strictly local, and explains at each level the signal that predicts how far a track will travel.",
+    "conclusionFr": "Trois signaux suffisent, et aucun ne dépend du nombre d'écoutes. Le premier est la langue du refrain rapportée au marché visé : un titre en anglais part avec trente pays potentiels, un titre en espagnol avec une vingtaine, un titre en portugais ou en français avec deux ou trois. Cela ne dit rien de la qualité, seulement du plafond. Le deuxième est la présence de collaborations transfrontalières. Dai Dai associe une Colombienne et un Nigérian, Movin' To The Sun un producteur français et une chanteuse américaine, et ce sont les deux titres les plus largement diffusés du guide après l'album d'Ariana Grande, avec vingt-cinq et dix-sept pays. À l'inverse, un morceau crédité à un seul artiste national dépasse rarement trois pays. Le troisième est le rang moyen, et c'est le plus important des trois : couvrir vingt-cinq pays avec un rang moyen de 13,3 comme Dai Dai n'a rien à voir avec en couvrir dix-sept au rang moyen de 25,9. Le premier cas décrit un succès installé partout, le second un titre porté par un circuit qui s'arrête net à la frontière de son réseau. Appliqués ensemble, ces trois filtres permettent de lire un classement national sans se laisser tromper par les chiffres bruts, et de repérer une semaine à l'avance les titres qui vont apparaître ailleurs.",
+    "conclusionEn": "Three signals are enough, and none of them depends on play counts. The first is the language of the chorus measured against the target market: a track in English starts with thirty potential countries, one in Spanish with about twenty, one in Portuguese or French with two or three. That says nothing about quality, only about the ceiling. The second is the presence of cross-border collaborations. Dai Dai pairs a Colombian and a Nigerian, Movin' To The Sun a French producer and an American singer, and they are the two most widely distributed songs in this guide after Ariana Grande's album, with twenty-five and seventeen countries. Conversely, a song credited to a single national artist rarely exceeds three countries. The third is the average rank, and it matters most of all: covering twenty-five countries at an average rank of 13.3, as Dai Dai does, has nothing to do with covering seventeen at an average rank of 25.9. The first describes a hit installed everywhere, the second a song carried by a circuit that stops dead at the edge of its network. Applied together, these three filters let you read a national chart without being fooled by raw numbers, and spot a week in advance the songs that are about to appear elsewhere.",
+    "items": [
+      {
+        "position": 1,
+        "appleId": "1895420989",
+        "type": "albums",
+        "title": "petal",
+        "artistName": "Ariana Grande",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7e/e6/82/7ee682bd-1b17-6adc-be63-b5af1bdff369/26UMGIM51126.rgb.jpg/100x100bb.jpg",
+        "countryCount": 32,
+        "sectionTitleFr": "Niveau 1 : les 32 pays, sans exception",
+        "sectionTitleEn": "Level 1: All 32 Countries, No Exception",
+        "sectionTextFr": "Le plafond absolu du relevé : présence dans les trente-deux pays suivis, rang moyen de 1,9. Ce niveau n'est atteignable qu'avec trois conditions réunies : une langue comprise partout, une distribution simultanée mondiale et une notoriété antérieure suffisante pour que l'écoute démarre le premier jour dans chaque pays. Une seule sortie du relevé remplit les trois.",
+        "sectionTextEn": "The absolute ceiling in this snapshot: present in all thirty-two tracked countries, average rank 1.9. This level requires three conditions at once: a language understood everywhere, a simultaneous worldwide release, and enough prior recognition for listening to start on day one in every country. Only one release in the snapshot meets all three."
+      },
+      {
+        "position": 2,
+        "appleId": "6768469976",
+        "type": "songs",
+        "title": "Dai Dai",
+        "artistName": "Shakira & Burna Boy",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/61/49/8d/61498ded-f0dc-227d-cd1d-2051b5d9f195/196874328590.jpg/100x100bb.jpg",
+        "countryCount": 25,
+        "sectionTitleFr": "Niveau 2 : 25 pays et neuf premières places",
+        "sectionTitleEn": "Level 2: 25 Countries and Nine Number Ones",
+        "sectionTextFr": "Vingt-cinq pays, rang moyen de 13,3, et surtout la première place dans neuf d'entre eux : Allemagne, Portugal, Pays-Bas, Suisse, Autriche, Suède, Norvège, Pologne et Émirats arabes unis. Le deuxième morceau le plus souvent en tête, Choosin' Texas d'Ella Langley, ne mène que dans quatre pays. Le signal à retenir est la nature du duo : une artiste colombienne et un artiste nigérian, deux zones d'influence sans recouvrement. Chaque collaborateur ouvre son propre territoire, et la somme dépasse largement ce que chacun aurait obtenu seul.",
+        "sectionTextEn": "Twenty-five countries, average rank 13.3, and above all first place in nine of them: Germany, Portugal, the Netherlands, Switzerland, Austria, Sweden, Norway, Poland and the United Arab Emirates. The second most frequent chart leader, Ella Langley's Choosin' Texas, tops only four countries. The signal to keep is the nature of the pairing: a Colombian artist and a Nigerian artist, two spheres of influence with no overlap. Each collaborator opens their own territory, and the sum far exceeds what either would have reached alone."
+      },
+      {
+        "position": 3,
+        "appleId": "6769070199",
+        "type": "songs",
+        "title": "Movin' To The Sun",
+        "artistName": "HUGEL, Imael Angel & Ultra Naté",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/96/61/7a/96617ab5-51da-7cfc-97e5-c5a6a893c210/1087654.jpg/100x100bb.jpg",
+        "sectionTitleFr": "Niveau 3 : 17 pays, mais un rang moyen de 25,9",
+        "sectionTitleEn": "Level 3: 17 Countries, but an Average Rank of 25.9",
+        "sectionTextFr": "Dix-sept pays au compteur, soit une couverture large, mais un rang moyen de 25,9 contre 13,3 pour le titre précédent. Le détail explique tout : deuxième en Allemagne, en Suisse et en Autriche, cinquième en Pologne, quatrième au Royaume-Uni, mais soixante-cinquième en France, soixante-treizième en Espagne et quatre-vingt-troisième en Finlande. C'est le profil type de la musique de club, portée par un circuit de festivals et de radios spécialisées qui irrigue un corridor de marchés voisins et effleure à peine les autres. Compter les pays ne suffit jamais, il faut regarder où le titre s'arrête.",
+        "sectionTextEn": "Seventeen countries, which is broad coverage, but an average rank of 25.9 against 13.3 for the previous track. The detail explains everything: second in Germany, Switzerland and Austria, fifth in Poland, fourth in the United Kingdom, but sixty-fifth in France, seventy-third in Spain and eighty-third in Finland. This is the typical profile of club music, carried by a festival and specialist radio circuit that saturates a corridor of neighbouring markets and barely touches the rest. Counting countries is never enough. You have to look at where the song stops."
+      },
+      {
+        "position": 4,
+        "appleId": "1894272112",
+        "type": "songs",
+        "title": "LA GRACIOSA",
+        "artistName": "Quevedo & Elvis Crespo",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/56/e5/bf/56e5bfea-2071-1224-1c62-f6119195a949/8718521173821.jpg/100x100bb.jpg",
+        "sectionTitleFr": "Niveau 4 : quatre pays, et l'illusion de la langue",
+        "sectionTitleEn": "Level 4: Four Countries, and the Language Illusion",
+        "sectionTextFr": "Premier en Espagne, cinquième en Italie, vingt et unième en Argentine, quatre-vingt-cinquième au Chili, et absent du Mexique comme de la Colombie. Ce cas est instructif : un titre en espagnol ne franchit pas automatiquement les frontières hispanophones. Les marchés latino-américains ont leurs propres genres dominants, et un numéro un espagnol y arrive au mieux en milieu de tableau. La présence en Italie, meilleure que celle en Argentine, s'explique d'ailleurs par la proximité des circuits radio du sud de l'Europe, pas par la langue.",
+        "sectionTextEn": "First in Spain, fifth in Italy, twenty-first in Argentina, eighty-fifth in Chile, and absent from both Mexico and Colombia. This case is instructive: a song in Spanish does not automatically cross Spanish-speaking borders. Latin American markets have their own dominant genres, and a Spanish number one lands there mid-table at best. Its Italian position, better than its Argentine one, comes from the proximity of southern European radio circuits rather than from language."
+      },
+      {
+        "position": 5,
+        "appleId": "1804142885",
+        "type": "songs",
+        "title": "TU SANCHO",
+        "artistName": "Fuerza Regida",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/51/0a/a3/510aa39f-7a41-b53c-70a0-6a0df60645bb/196872995978.jpg/100x100bb.jpg",
+        "sectionTitleFr": "Niveau 5 : trois pays, dont un seul qui compte",
+        "sectionTitleEn": "Level 5: Three Countries, Only One That Counts",
+        "sectionTextFr": "Premier au Mexique, cinquante-troisième au Chili, cinquante-septième en Colombie, et absent des vingt-neuf autres classements. C'est le dernier étage, et le plus mal compris : ne pas franchir les frontières n'est pas un échec. Ce titre occupe la première place d'un marché de cent trente millions d'habitants depuis mai 2025, soit quinze mois, la plus longue tenue au sommet de tout le relevé. La couverture géographique et la solidité d'une position sont deux mesures indépendantes, et la seconde est la seule que l'artiste contrôle.",
+        "sectionTextEn": "First in Mexico, fifty-third in Chile, fifty-seventh in Colombia, and absent from the other twenty-nine charts. This is the bottom level, and the most misread: failing to cross borders is not a failure. This song has held first place in a market of a hundred and thirty million people since May 2025, fifteen months, the longest run at the top anywhere in the snapshot. Geographic coverage and the durability of a position are two independent measurements, and the second is the only one an artist controls."
+      }
+    ]
+  },
+  {
+    "format": "PORTRAIT",
+    "titleFr": "Quevedo place deux titres du même jour dans le top trois espagnol",
+    "titleEn": "Quevedo Places Two Songs From the Same Day in the Spanish Top Three",
+    "introFr": "Le classement espagnol du 9 août 2026 comporte deux titres crédités au même artiste, aux première et troisième places. Les deux sont sortis le 23 avril 2026, à la même heure, avec deux invités différents. Quatre mois plus tard, ils tiennent toujours les deux extrémités du podium, et l'un des deux a franchi la frontière italienne. Ce double placement décrit une méthode qui n'a rien d'improvisé.",
+    "introEn": "The Spanish chart on 9 August 2026 contains two songs credited to the same artist, in first and third place. Both were released on 23 April 2026, at the same hour, with two different guests. Four months later they still hold both ends of the podium, and one of the two has crossed into Italy. This double placement describes a method that is anything but improvised.",
+    "conclusionFr": "La méthode est visible dans le détail des crédits. Le premier titre associe l'artiste à une figure historique du merengue portoricain, le second à un collectif beaucoup plus jeune. Deux invités, deux publics, deux générations, un seul disque et une seule date de sortie. Cette construction produit exactement ce que le classement montre : deux entrées qui ne se cannibalisent pas, parce qu'elles ne vont pas chercher les mêmes auditeurs. Le résultat se mesure dans la durée plus que dans la hauteur. Quatre mois après la sortie, les deux titres sont toujours dans le top trois espagnol, alors que la moyenne du relevé mondial voit 39 % des lignes occupées par des sorties de l'année en cours, dont la plupart n'ont que quelques semaines. Le seul point faible apparaît quand on regarde au-delà des Pyrénées : le premier titre est cinquième en Italie et vingt et unième en Argentine, le second sixième en Argentine, et c'est tout. Ni l'un ni l'autre ne figure au classement mexicain ou colombien, ce qui rappelle que le marché hispanophone n'est pas un bloc. Un numéro un espagnol se construit à Madrid, pas à Mexico, et il n'a aucune raison de voyager dans l'autre sens.",
+    "conclusionEn": "The method is visible in the credits. The first song pairs the artist with a historic figure of Puerto Rican merengue, the second with a much younger collective. Two guests, two audiences, two generations, one record and one release date. That construction produces exactly what the chart shows: two entries that do not cannibalise each other, because they are not chasing the same listeners. The result is measured in duration rather than height. Four months after release, both songs are still in the Spanish top three, while across the global snapshot 39 % of lines are held by releases from the current year, most of them only weeks old. The one weakness appears beyond the Pyrenees: the first song is fifth in Italy and twenty-first in Argentina, the second sixth in Argentina, and that is all. Neither figures in the Mexican or Colombian charts, a reminder that the Spanish-speaking market is not a bloc. A Spanish number one is built in Madrid, not in Mexico City, and it has no particular reason to travel the other way.",
+    "items": [
+      {
+        "position": 1,
+        "appleId": "1894272112",
+        "type": "songs",
+        "title": "LA GRACIOSA",
+        "artistName": "Quevedo & Elvis Crespo",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/56/e5/bf/56e5bfea-2071-1224-1c62-f6119195a949/8718521173821.jpg/100x100bb.jpg",
+        "sectionTitleFr": "Premier en Espagne, cinquième en Italie",
+        "sectionTitleEn": "First in Spain, Fifth in Italy",
+        "sectionTextFr": "Sorti le 23 avril 2026, le titre occupe la première place espagnole quatre mois plus tard et se classe cinquième en Italie, vingt et unième en Argentine et quatre-vingt-cinquième au Chili. C'est celle des deux sorties qui va le plus loin. L'invité est un vétéran du merengue dont la carrière a commencé dans les années 1990, un choix qui élargit la cible bien au-delà du public habituel de l'artiste principal et qui explique probablement la longévité de la position.",
+        "sectionTextEn": "Released on 23 April 2026, the song holds first place in Spain four months later and ranks fifth in Italy, twenty-first in Argentina and eighty-fifth in Chile. It is the one of the two releases that travels furthest. The guest is a merengue veteran whose career began in the 1990s, a choice that widens the target far beyond the lead artist's usual audience and probably explains how durable the position has been."
+      },
+      {
+        "position": 2,
+        "appleId": "1894271858",
+        "type": "songs",
+        "title": "AL GOLPITO",
+        "artistName": "Quevedo & Nueva Línea",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/56/e5/bf/56e5bfea-2071-1224-1c62-f6119195a949/8718521173821.jpg/100x100bb.jpg",
+        "sectionTitleFr": "Troisième en Espagne, absent partout ailleurs",
+        "sectionTitleEn": "Third in Spain, Absent Everywhere Else",
+        "sectionTextFr": "Publié le même jour que le précédent, ce titre est troisième en Espagne, sixième en Argentine, et absent des trente autres classements nationaux du relevé. Entre les deux entrées se glisse un seul morceau, celui d'Aitana, ce qui signifie que l'artiste tient à lui seul deux des trois meilleures positions de son pays. Aucun autre artiste du relevé n'obtient ce résultat sur un marché européen.",
+        "sectionTextEn": "Published on the same day as the previous track, this song is third in Spain, sixth in Argentina, and absent from the other thirty national charts in the snapshot. Only one song separates the two entries, Aitana's, which means this artist alone holds two of the three best positions in his country. No other artist in the snapshot achieves that on a European market."
+      }
+    ]
+  },
+  {
+    "format": "RETROSPECTIVE",
+    "titleFr": "Le top dix allemand est à moitié un musée",
+    "titleEn": "The German Top Ten Is Half a Museum",
+    "introFr": "Le classement allemand du 9 août 2026 contient quatre morceaux sortis avant 2018, dont un de 1982 et un de 2003. Un seul autre pays du relevé en compte autant, la Finlande, mais ses quatre titres proviennent du même groupe finlandais et de la même année, 1996 : c'est un réflexe patrimonial national, pas une ouverture au catalogue. L'Allemagne est donc le seul des trente-deux marchés dont le top dix accueille quatre classiques internationaux issus de quatre décennies différentes, alors que 39 % des lignes du relevé mondial datent de 2026 et 18 % de 2025. Cette rétrospective examine les quatre entrées qui l'illustrent.",
+    "introEn": "The German chart on 9 August 2026 contains four songs released before 2018, including one from 1982 and one from 2003. Only one other country in the snapshot matches that count, Finland, but its four titles come from the same Finnish band and the same year, 1996: that is a national heritage reflex, not an openness to catalogue. Germany is therefore the only one of the thirty-two markets whose top ten holds four international classics from four different decades, at a time when 39 % of the global snapshot's lines date from 2026 and 18 % from 2025. This retrospective examines the four entries that illustrate it.",
+    "conclusionFr": "Quatre décennies dans un seul top dix, 1982, 2003, 2012 et 2017, ce n'est pas un hasard statistique, et la vérification pays par pays le confirme. Pour trois de ces quatre titres, la meilleure position mondiale est autrichienne et la deuxième allemande : quatrième et cinquième pour Lush Life, cinquième et sixième pour Beauty and a Beat, septième et huitième pour Mr. Brightside. Le quatrième, Billie Jean, place la Suisse septième et l'Allemagne dixième sur vingt-trois pays. Ces morceaux ne sont donc pas des curiosités allemandes : ce sont des succès internationaux auxquels l'espace germanophone accorde systématiquement ses meilleures places. Trois mécanismes l'expliquent. Le premier est la radio : l'Allemagne conserve un réseau de stations généralistes puissantes dont les programmations font tourner un répertoire de classiques, et ces diffusions se traduisent directement en écoutes à la demande. Le deuxième est l'usage festif : Mr. Brightside et Billie Jean sont des titres de fin de soirée, joués dans des contextes collectifs qui produisent chaque semaine de nouveaux auditeurs individuels. Le troisième est l'absence de production locale dominante. Deux entrées seulement de ce top dix sont portées par des artistes allemands, et les deux premières places reviennent à des projets internationaux. Quand un marché ne fabrique pas assez de nouveautés pour remplir son propre classement, le catalogue occupe le vide. Comparez avec le Mexique, où les dix premières places sont locales et anciennes, ou avec la France, où elles sont locales et récentes : l'Allemagne est le seul des trois à combiner importation et ancienneté. C'est aussi le seul dont le top dix pourrait être joué presque intégralement dans une soirée de 2010.",
+    "conclusionEn": "Four decades in a single top ten, 1982, 2003, 2012 and 2017, is not a statistical accident, and checking country by country confirms it. For three of those four songs, the best position worldwide is Austrian and the second German: fourth and fifth for Lush Life, fifth and sixth for Beauty and a Beat, seventh and eighth for Mr. Brightside. The fourth, Billie Jean, puts Switzerland seventh and Germany tenth out of twenty-three countries. These tracks are therefore not German curiosities: they are international hits to which the German-speaking area consistently grants its best positions. Three mechanisms explain it. The first is radio: Germany retains a network of powerful mainstream stations whose playlists keep a repertoire of classics in rotation, and that airplay converts directly into on-demand listening. The second is party usage: Mr. Brightside and Billie Jean are end-of-night songs, played in collective settings that produce new individual listeners every week. The third is the absence of a dominant local production. Only two entries in this top ten are carried by German artists, and the top two places go to international projects. When a market does not manufacture enough new releases to fill its own chart, the catalogue occupies the gap. Compare with Mexico, where the top ten places are local and old, or with France, where they are local and recent: Germany is the only one of the three to combine imports with age. It is also the only one whose top ten could be played almost in full at a party from 2010.",
+    "items": [
+      {
+        "position": 1,
+        "appleId": "1201058113",
+        "type": "songs",
+        "title": "Lush Life",
+        "artistName": "Zara Larsson",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/74/e6/3b/74e63bb4-d593-f926-85c7-df3ca43fcf3f/886446183473.jpg/100x100bb.jpg",
+        "sectionTitleFr": "2017, cinquième place",
+        "sectionTitleEn": "2017, Fifth Place",
+        "sectionTextFr": "Le plus récent des quatre anciens, et le mieux classé : neuf ans après sa sortie, ce titre suédois est cinquième en Allemagne. Il figure en réalité dans quinze pays du relevé, mais deux positions seulement égalent ou dépassent l'allemande : l'Autriche, quatrième, et la Suède, pays de l'artiste, cinquième elle aussi. Partout ailleurs, il se situe entre la treizième et la soixante-huitième place. L'espace germanophone et la Scandinavie forment son territoire réel.",
+        "sectionTextEn": "The most recent of the four older entries, and the best placed: nine years after release, this Swedish track is fifth in Germany. It actually appears in fifteen countries in the snapshot, but only two positions match or beat the German one: Austria at fourth, and Sweden, the artist's home, also fifth. Everywhere else it sits between thirteenth and sixty-eighth place. The German-speaking area and Scandinavia are its real territory."
+      },
+      {
+        "position": 2,
+        "appleId": "1440650961",
+        "type": "songs",
+        "title": "Beauty and a Beat (feat. Nicki Minaj)",
+        "artistName": "Justin Bieber",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/73/08/1a/73081a96-0f7c-b5f8-2757-5c17fb714323/12UMGIM31899.rgb.jpg/100x100bb.jpg",
+        "countryCount": 24,
+        "sectionTitleFr": "2012, sixième place, et 24 pays",
+        "sectionTitleEn": "2012, Sixth Place, and 24 Countries",
+        "sectionTextFr": "Sixième en Allemagne, ce titre de 2012 est surtout le seul du groupe à circuler ailleurs : il figure dans vingt-quatre pays du relevé avec un rang moyen de 33,8, ce qui en fait le quatrième morceau le plus mondial de tout le tableau, derrière deux titres d'Ariana Grande et Dai Dai. Un morceau de quatorze ans dans le quatuor de tête de la couverture géographique mondiale est le résultat le plus inattendu du relevé.",
+        "sectionTextEn": "Sixth in Germany, this 2012 track is above all the only one of the group to circulate elsewhere: it appears in twenty-four countries in the snapshot with an average rank of 33.8, making it the fourth most global song in the entire table, behind two Ariana Grande tracks and Dai Dai. A fourteen-year-old song in the top four for worldwide geographic coverage is the most unexpected result in the snapshot."
+      },
+      {
+        "position": 3,
+        "appleId": "1526194192",
+        "type": "songs",
+        "title": "Mr. Brightside",
+        "artistName": "The Killers",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/07/1a/5a/071a5aee-6e42-060c-35b9-6a6e45b9ea59/06UMGIM10441.rgb.jpg/100x100bb.jpg",
+        "sectionTitleFr": "2003, huitième place, vingt-trois ans après",
+        "sectionTitleEn": "2003, Eighth Place, Twenty-Three Years Later",
+        "sectionTextFr": "Huitième en Allemagne pour un morceau sorti en septembre 2003. Il n'apparaît que dans onze pays, et ses deux meilleures positions mondiales sont l'Autriche, septième, et l'Allemagne, huitième, loin devant le Royaume-Uni, pays du groupe, qui le classe vingt-troisième. Sa présence est le cas d'école de la chanson devenue rituel collectif : elle n'est pas écoutée pour elle-même mais rejouée dans des contextes précis, fins de concerts, mariages, dernières heures de soirée, et chaque occurrence renvoie une partie de l'assistance vers l'écoute individuelle le lendemain. Aucune campagne ne peut fabriquer ce circuit.",
+        "sectionTextEn": "Eighth in Germany for a song released in September 2003. It appears in only eleven countries, and its two best positions worldwide are Austria at seventh and Germany at eighth, far ahead of the United Kingdom, the band's home market, which ranks it twenty-third. Its presence is the textbook case of a song turned collective ritual: it is not listened to for itself but replayed in specific settings, encore sets, weddings, the last hours of a night out, and each occurrence sends part of the crowd back to individual listening the next day. No campaign can manufacture that circuit."
+      },
+      {
+        "position": 4,
+        "appleId": "269573364",
+        "type": "songs",
+        "title": "Billie Jean",
+        "artistName": "Michael Jackson",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/100x100bb.jpg",
+        "sectionTitleFr": "1982, dixième place, quarante-quatre ans après",
+        "sectionTitleEn": "1982, Tenth Place, Forty-Four Years Later",
+        "sectionTextFr": "Dixième en Allemagne pour un titre publié en novembre 1982. C'est le morceau le plus ancien de tout le relevé mondial à figurer dans un top dix national, et il y parvient dans six pays à la fois : Pays-Bas sixième, Émirats arabes unis sixième, Suisse septième, Nouvelle-Zélande huitième, Australie neuvième, Allemagne dixième. Sa couverture totale atteint vingt-trois pays. Michael Jackson totalise par ailleurs 57 lignes de classement sur l'ensemble des trente-deux pays, ce qui le place quatrième artiste du relevé, devant Taylor Swift et ses 53 lignes. Un catalogue de quarante ans qui devance une carrière en cours : c'est la donnée la plus difficile à commenter du tableau, et la plus solide.",
+        "sectionTextEn": "Tenth in Germany for a track published in November 1982. It is the oldest song in the entire global snapshot to appear in a national top ten, and it manages it in six countries at once: the Netherlands sixth, the United Arab Emirates sixth, Switzerland seventh, New Zealand eighth, Australia ninth, Germany tenth. Its total coverage reaches twenty-three countries. Michael Jackson also totals 57 chart lines across all thirty-two countries, placing him fourth among artists in the snapshot, ahead of Taylor Swift and her 53 lines. A forty-year-old catalogue outranking an active career is the hardest data point in the table to comment on, and the most solid."
+      }
+    ]
+  },
+  {
+    "format": "SUGGESTION",
+    "titleFr": "Olivia Dean est numéro un dans deux pays avec deux titres différents",
+    "titleEn": "Olivia Dean Is Number One in Two Countries With Two Different Songs",
+    "introFr": "Le classement britannique du 9 août 2026 s'ouvre sur deux titres crédités à la même artiste : Olivia Dean est première en solo et deuxième en duo. Le même jour, de l'autre côté de la mer d'Irlande, c'est ce duo qui occupe la première place irlandaise. Deux morceaux parus à trois semaines d'intervalle à l'automne 2025, deux numéros un simultanés dans deux pays onze mois plus tard, et une carte de diffusion qui redessine presque exactement l'ancien axe de circulation de la pop britannique. C'est la recommandation de la semaine, et la façon dont elle s'est construite mérite autant d'attention que la musique elle-même.",
+    "introEn": "The British chart on 9 August 2026 opens with two songs credited to the same artist: Olivia Dean is first solo and second as part of a duet. On the same day, across the Irish Sea, that duet holds first place in Ireland. Two songs released three weeks apart in the autumn of 2025, two simultaneous number ones in two countries eleven months later, and a distribution map that redraws almost exactly the old circulation axis of British pop. This is the week's recommendation, and how it was built deserves as much attention as the music itself.",
+    "conclusionFr": "Il y a une raison précise d'écouter ces deux titres maintenant plutôt que de les découvrir dans six mois. Le classement britannique est l'un des plus rapides du relevé, et les troisième, quatrième et cinquième places y sont occupées par des sorties récentes de Shakira, HUGEL et Ariana Grande, dont deux figurent dans plus de vingt pays. Tenir les deux premières places contre cette concurrence, avec des morceaux de onze mois et sans aucune sortie récente pour relancer l'intérêt, est un résultat que très peu d'artistes obtiennent. Le plus intéressant tient à la carte que ces deux titres dessinent. La zone forte couvre les îles Britanniques, l'Océanie, le Canada et les Pays-Bas, avec la Scandinavie juste derrière, entre la douzième et la dix-septième place. Au-delà, tout s'effondre : cinquante-deuxième en Belgique, soixante et unième en Autriche, soixante-douzième en Allemagne, quatre-vingt-dix-huitième en France, et aucune présence en Espagne ni en Italie. Aux États-Unis, le titre plafonne à la trente et unième place. C'est l'ancien axe anglophone dans son intégralité, moins le marché américain. Comparez avec Dai Dai de Shakira et Burna Boy, numéro un dans neuf pays sur trois continents grâce à une collaboration entre deux zones d'influence sans recouvrement : les deux méthodes produisent des numéros un, mais pas le même nombre. Onze mois après la sortie, la situation d'Olivia Dean est exactement au point de bascule : soit une collaboration ou une synchronisation ouvre le continent et les États-Unis dans l'année, soit elle restera une très grande artiste dans huit pays. Les deux titres ci-dessous permettent d'écouter ce moment précis avant qu'il ne se décide.",
+    "conclusionEn": "There is a precise reason to listen to these two songs now rather than discovering them in six months. The British chart is one of the fastest in the snapshot, and third, fourth and fifth place there are held by recent releases from Shakira, HUGEL and Ariana Grande, two of which appear in more than twenty countries. Holding the top two places against that competition, with eleven-month-old songs and no recent release to revive interest, is a result very few artists achieve. The most interesting part is the map these two songs draw. The strong zone covers the British Isles, Oceania, Canada and the Netherlands, with Scandinavia just behind, between twelfth and seventeenth place. Beyond that, everything collapses: fifty-second in Belgium, sixty-first in Austria, seventy-second in Germany, ninety-eighth in France, and no presence at all in Spain or Italy. In the United States the song stalls at thirty-first. This is the old anglophone axis in full, minus the American market. Compare with Shakira and Burna Boy's Dai Dai, number one in nine countries across three continents thanks to a collaboration between two non-overlapping spheres of influence: both methods produce number ones, but not the same number of them. Eleven months after release, Olivia Dean's position sits exactly at the tipping point: either a collaboration or a sync opens the continent and the United States within the year, or she remains a very major artist in eight countries. The two songs below let you hear that precise moment before it is decided.",
+    "items": [
+      {
+        "position": 1,
+        "appleId": "1817609509",
+        "type": "songs",
+        "title": "Man I Need",
+        "artistName": "Olivia Dean",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/08/e2/21/08e22164-7c0b-1522-818f-e0e74f62dc49/25UMGIM69703.rgb.jpg/100x100bb.jpg",
+        "sectionTitleFr": "Premier depuis onze mois",
+        "sectionTitleEn": "Number One for Eleven Months",
+        "sectionTextFr": "Sorti le 26 septembre 2025, ce titre occupe la première place britannique le 9 août 2026, soit dix mois et demi plus tard. Sur les trente-deux pays du relevé, huit seulement affichent un numéro un aussi ancien, et celui-ci est le deuxième plus vieux de tous, derrière le Mexique. Le morceau figure au total dans dix-huit classements nationaux avec un rang moyen de 31,1, et ses quatre meilleures positions dessinent une zone très nette : premier au Royaume-Uni, deuxième en Australie, troisième en Nouvelle-Zélande, quatrième en Irlande.",
+        "sectionTextEn": "Released on 26 September 2025, this song holds first place in the United Kingdom on 9 August 2026, ten and a half months later. Of the thirty-two countries in the snapshot, only eight have a number one that old, and this is the second oldest of them all, behind Mexico. The track appears in eighteen national charts in total with an average rank of 31.1, and its four best positions draw a very clear zone: first in the United Kingdom, second in Australia, third in New Zealand, fourth in Ireland."
+      },
+      {
+        "position": 2,
+        "appleId": "1820918468",
+        "type": "songs",
+        "title": "Rein Me In",
+        "artistName": "Sam Fender & Olivia Dean",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/8f/0f/9f/8f0f9f3d-b26b-779d-d1f1-2db2154a68b7/25UMGIM75096.rgb.jpg/100x100bb.jpg",
+        "sectionTitleFr": "Premier en Irlande, deuxième au Royaume-Uni",
+        "sectionTitleEn": "First in Ireland, Second in the United Kingdom",
+        "sectionTextFr": "Publié le 17 octobre 2025, trois semaines après le précédent, ce duo est numéro un en Irlande et deuxième au Royaume-Uni. Le partenaire est lui aussi britannique, et le morceau est classé en musique alternative plutôt qu'en pop, ce qui explique qu'il ne cannibalise pas le premier : les deux titres visent des auditoires voisins sans se superposer. Sa couverture est deux fois plus étroite, neuf pays contre dix-huit, mais elle se superpose exactement à la précédente : cinquième en Nouvelle-Zélande, sixième en Australie, dix-huitième aux Pays-Bas. Là où l'artiste fonctionne, elle fonctionne deux fois.",
+        "sectionTextEn": "Published on 17 October 2025, three weeks after the previous track, this duet is number one in Ireland and second in the United Kingdom. The partner is also British, and the song is filed under alternative rather than pop, which explains why it does not cannibalise the first: the two tracks target neighbouring audiences without overlapping. Its coverage is half as wide, nine countries against eighteen, but it maps exactly onto the other one: fifth in New Zealand, sixth in Australia, eighteenth in the Netherlands. Where this artist works, she works twice."
+      }
+    ]
+  }
+]
