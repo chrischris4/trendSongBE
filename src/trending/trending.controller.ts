@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Query, UseGuards } from '@nestjs/common';
+import { Controller, Get, Param, Post, Query, UseGuards } from '@nestjs/common';
 import { TrendingService } from './trending.service';
 import { ApiKeyGuard } from '../auth/guards/api-key.guard';
 
@@ -23,8 +23,29 @@ export class TrendingController {
     return this.trendingService.getTrending(t, country, parseInt(limit));
   }
 
+  // Recalcule les statistiques sans relancer une synchronisation Apple complete,
+  // utile pour valider le calcul juste apres un deploiement.
+  @Post('stats/compute')
+  @UseGuards(ApiKeyGuard)
+  async computeStats() {
+    await this.trendingService.computeDailyStats();
+    return { computed: true };
+  }
+
   @Get('stats')
   getStats() {
     return this.trendingService.getStats();
+  }
+
+  // Renouvellement quotidien d'un classement national, precalcule par le cron.
+  @Get('evolution/:country')
+  async getEvolution(
+    @Param('country') country: string,
+    @Query('type') type: string = 'songs',
+    @Query('days') days: string = '7',
+  ) {
+    const t = type === 'albums' ? 'albums' : 'songs';
+    const stats = await this.trendingService.getDailyStats(country, t, parseInt(days));
+    return { country: country.toUpperCase(), type: t, total: stats.length, stats };
   }
 }

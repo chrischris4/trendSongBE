@@ -54,8 +54,109 @@ export class TrendingService implements OnModuleInit {
     }
 
     await this.cleanOld();
+    // Le calcul des statistiques ne doit jamais faire echouer la synchronisation :
+    // les releves du jour sont deja en base a ce stade.
+    try {
+      await this.computeDailyStats();
+    } catch (e) {
+      this.logger.error(`Statistiques quotidiennes non calculées : ${(e as Error).message}`);
+    }
     this.cache.clear();
     this.logger.log(`Synchronisation terminée — ${total} entrées`);
+  }
+
+  /**
+   * Renouvellement quotidien de chaque classement, calcule une fois par jour.
+   *
+   * Apple publie le classement du moment, jamais la part qui a survecu depuis
+   * la veille ni depuis combien de jours un titre s'y accroche. Ces deux
+   * mesures n'existent que parce qu'on conserve 90 jours de releves, et elles
+   * sont precalculees ici pour qu'aucune page ne declenche d'agregation.
+   */
+  async computeDailyStats() {
+    const rows = await this.prisma.$queryRaw<Array<{
+      countryCode: string; type: string; entriesTotal: number; newEntries: number;
+      droppedOut: number; uniqueArtists: number; topGainerId: string | null;
+      topGainerName: string | null; topGainerArtist: string | null; topGainerDelta: number | null;
+      topTenureId: string | null; topTenureName: string | null; topTenureArtist: string | null;
+      topTenureDays: number | null;
+    }>>`
+      WITH snap AS (
+        SELECT "countryCode", "type", "appleId", "name", "artistName", "rank",
+               ("fetchedAt" AT TIME ZONE 'UTC')::date AS d
+        FROM trending_tracks
+      ),
+      today AS (SELECT * FROM snap WHERE d = (SELECT MAX(d) FROM snap)),
+      prev  AS (SELECT * FROM snap WHERE d = (SELECT MAX(d) FROM snap WHERE d < (SELECT MAX(d) FROM snap))),
+      tenure AS (
+        SELECT "countryCode", "type", "appleId", COUNT(DISTINCT d)::int AS days
+        FROM snap GROUP BY "countryCode", "type", "appleId"
+      ),
+      gain AS (
+        SELECT DISTINCT ON (t."countryCode", t."type")
+               t."countryCode", t."type", t."appleId", t."name", t."artistName",
+               (p."rank" - t."rank")::int AS delta
+        FROM today t JOIN prev p
+          ON p."countryCode" = t."countryCode" AND p."type" = t."type" AND p."appleId" = t."appleId"
+        WHERE p."rank" > t."rank"
+        ORDER BY t."countryCode", t."type", (p."rank" - t."rank") DESC
+      ),
+      best AS (
+        SELECT DISTINCT ON (t."countryCode", t."type")
+               t."countryCode", t."type", t."appleId", t."name", t."artistName", te.days
+        FROM today t JOIN tenure te
+          ON te."countryCode" = t."countryCode" AND te."type" = t."type" AND te."appleId" = t."appleId"
+        ORDER BY t."countryCode", t."type", te.days DESC, t."rank" ASC
+      )
+      SELECT
+        t."countryCode", t."type",
+        COUNT(*)::int AS "entriesTotal",
+        COUNT(*) FILTER (WHERE p."appleId" IS NULL)::int AS "newEntries",
+        (SELECT COUNT(*) FROM prev p2
+          WHERE p2."countryCode" = t."countryCode" AND p2."type" = t."type"
+            AND NOT EXISTS (SELECT 1 FROM today t2
+                            WHERE t2."countryCode" = p2."countryCode" AND t2."type" = p2."type"
+                              AND t2."appleId" = p2."appleId")
+        )::int AS "droppedOut",
+        COUNT(DISTINCT t."artistName")::int AS "uniqueArtists",
+        MIN(g."appleId") AS "topGainerId", MIN(g."name") AS "topGainerName",
+        MIN(g."artistName") AS "topGainerArtist", MIN(g.delta)::int AS "topGainerDelta",
+        MIN(b."appleId") AS "topTenureId", MIN(b."name") AS "topTenureName",
+        MIN(b."artistName") AS "topTenureArtist", MIN(b.days)::int AS "topTenureDays"
+      FROM today t
+      LEFT JOIN prev p ON p."countryCode" = t."countryCode" AND p."type" = t."type" AND p."appleId" = t."appleId"
+      LEFT JOIN gain g ON g."countryCode" = t."countryCode" AND g."type" = t."type"
+      LEFT JOIN best b ON b."countryCode" = t."countryCode" AND b."type" = t."type"
+      GROUP BY t."countryCode", t."type"`;
+
+    if (!rows.length) {
+      this.logger.warn('Statistiques quotidiennes : aucun relevé à analyser');
+      return;
+    }
+
+    const day = new Date();
+    day.setUTCHours(0, 0, 0, 0);
+
+    for (const r of rows) {
+      const churnPct = r.entriesTotal > 0 ? Math.round((r.newEntries / r.entriesTotal) * 100) : 0;
+      const data = { ...r, churnPct, day };
+      await this.prisma.dailyChartStat.upsert({
+        where: { day_countryCode_type: { day, countryCode: r.countryCode, type: r.type } },
+        create: data,
+        update: data,
+      });
+    }
+
+    this.logger.log(`Statistiques quotidiennes calculées pour ${rows.length} classements`);
+  }
+
+  // Simple lecture des lignes precalculees, sans aucune agregation.
+  async getDailyStats(countryCode: string, type: 'songs' | 'albums', days = 7) {
+    return this.prisma.dailyChartStat.findMany({
+      where: { countryCode: countryCode.toUpperCase(), type },
+      orderBy: { day: 'desc' },
+      take: Math.min(days, 90),
+    });
   }
 
   private async syncCountry(countryCode: string, type: 'songs' | 'albums', fetchedAt: Date): Promise<number> {

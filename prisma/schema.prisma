@@ -18,6 +18,35 @@ enum BlogArticleFormat {
   RETROSPECTIVE
 }
 
+// Statistiques calculees une fois par jour par le cron, apres la synchronisation.
+// Les pages ne font que lire ces lignes : aucune agregation sur 90 jours n'est
+// declenchee par une requete visiteur, ce qui garde la RAM Postgres plate.
+// Une ligne par pays ET par type, songs et albums etant deux classements distincts.
+model DailyChartStat {
+  id               Int      @id @default(autoincrement())
+  day              DateTime @db.Date
+  countryCode      String
+  type             String // "songs" ou "albums"
+  entriesTotal     Int // taille du releve du jour
+  newEntries       Int // titres absents du releve de la veille
+  droppedOut       Int // titres presents la veille et absents aujourd'hui
+  churnPct         Int // part renouvelee du classement, en %
+  uniqueArtists    Int
+  topGainerId      String?
+  topGainerName    String?
+  topGainerArtist  String?
+  topGainerDelta   Int? // gain de rang par rapport a la veille
+  topTenureId      String?
+  topTenureName    String?
+  topTenureArtist  String?
+  topTenureDays    Int? // jours de presence sur la fenetre conservee
+  computedAt       DateTime @default(now())
+
+  @@unique([day, countryCode, type])
+  @@index([countryCode, type, day])
+  @@map("daily_chart_stats")
+}
+
 model TrendingTrack {
   id          String   @id @default(cuid())
   appleId     String
