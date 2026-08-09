@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Query, UseGuards } from '@nestjs/common';
+import { Controller, Get, NotFoundException, Param, Post, Query, UseGuards } from '@nestjs/common';
 import { TrendingService } from './trending.service';
 import { ApiKeyGuard } from '../auth/guards/api-key.guard';
 
@@ -36,6 +36,14 @@ export class TrendingController {
   @Get('stats')
   getStats() {
     return this.trendingService.getStats();
+  }
+
+  // Trajectoire d'un titre : pic, duree de presence, pays traverses.
+  @Get('history/:appleId')
+  async getHistory(@Param('appleId') appleId: string) {
+    const history = await this.trendingService.getTrackHistory(appleId);
+    if (!history) throw new NotFoundException(`Aucun historique pour ${appleId}`);
+    return history;
   }
 
   // Renouvellement quotidien d'un classement national, precalcule par le cron.

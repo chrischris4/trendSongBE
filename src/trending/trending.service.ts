@@ -236,6 +236,89 @@ export class TrendingService implements OnModuleInit {
     return result;
   }
 
+  /**
+   * Trajectoire complete d'un titre sur la fenetre conservee.
+   *
+   * Apple expose un classement instantane : ni le pic atteint, ni la duree de
+   * presence, ni les pays traverses. Tout cela se deduit de nos releves
+   * successifs, et c'est la seule chose qu'une fiche titre peut apporter qu'on
+   * ne trouve pas a la source. La requete est servie par l'index sur appleId.
+   */
+  async getTrackHistory(appleId: string) {
+    const key = `history:${appleId}`;
+    const cached = this.fromCache<unknown>(key);
+    if (cached) return cached;
+
+    const rows = await this.prisma.trendingTrack.findMany({
+      where: { appleId },
+      orderBy: { fetchedAt: 'asc' },
+    });
+    if (!rows.length) return null;
+
+    const dayOf = (d: Date) => d.toISOString().slice(0, 10);
+    const latest = rows[rows.length - 1];
+
+    // Un pays peut apparaitre plusieurs fois par jour si une synchro est rejouee :
+    // on raisonne en jours distincts, jamais en nombre de lignes.
+    const byCountry = new Map<string, { days: Set<string>; bestRank: number; lastDay: string; lastRank: number }>();
+    const byDay = new Map<string, { bestRank: number; countries: Set<string> }>();
+    let peak = { rank: Number.MAX_SAFE_INTEGER, countryCode: '', day: '' };
+
+    for (const row of rows) {
+      const day = dayOf(row.fetchedAt);
+
+      const country = byCountry.get(row.countryCode) ?? { days: new Set(), bestRank: row.rank, lastDay: day, lastRank: row.rank };
+      country.days.add(day);
+      country.bestRank = Math.min(country.bestRank, row.rank);
+      if (day >= country.lastDay) { country.lastDay = day; country.lastRank = row.rank; }
+      byCountry.set(row.countryCode, country);
+
+      const daily = byDay.get(day) ?? { bestRank: row.rank, countries: new Set() };
+      daily.bestRank = Math.min(daily.bestRank, row.rank);
+      daily.countries.add(row.countryCode);
+      byDay.set(day, daily);
+
+      if (row.rank < peak.rank) peak = { rank: row.rank, countryCode: row.countryCode, day };
+    }
+
+    const days = [...byDay.keys()].sort();
+    const lastDay = days[days.length - 1];
+
+    const result = {
+      appleId,
+      type: latest.type,
+      name: latest.name,
+      artistName: latest.artistName,
+      artworkUrl: latest.artworkUrl,
+      url: latest.url,
+      releaseDate: latest.releaseDate,
+      genreNames: latest.genreNames,
+      explicit: latest.explicit,
+      firstSeen: days[0],
+      lastSeen: lastDay,
+      daysOnChart: days.length,
+      countryCount: byCountry.size,
+      peak,
+      countries: [...byCountry.entries()]
+        .map(([countryCode, c]) => ({
+          countryCode,
+          days: c.days.size,
+          bestRank: c.bestRank,
+          // Rang actuel seulement si le titre figure encore au dernier releve.
+          currentRank: c.lastDay === lastDay ? c.lastRank : null,
+        }))
+        .sort((a, b) => a.bestRank - b.bestRank),
+      timeline: days.map(day => ({
+        day,
+        bestRank: byDay.get(day)!.bestRank,
+        countryCount: byDay.get(day)!.countries.size,
+      })),
+    };
+
+    this.toCache(key, result);
+    return result;
+  }
+
   async getStats() {
     const cached = this.fromCache<unknown>('stats');
     if (cached) return cached;
