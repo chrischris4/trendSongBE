@@ -64,6 +64,11 @@ model TrendingTrack {
   rank        Int
   countryCode String
   fetchedAt   DateTime @default(now())
+  // Nombre de jours distincts ou ce titre a figure dans ce classement, sur la
+  // fenetre conservee. Precalcule apres chaque synchronisation : Apple ne
+  // publie pas cette information, et l'agreger a chaque requete visiteur
+  // couterait une lecture de 90 jours d'historique.
+  daysOnChart Int?
 
   @@index([countryCode, type, fetchedAt])
   @@index([appleId])

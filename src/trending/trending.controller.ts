@@ -28,6 +28,7 @@ export class TrendingController {
   @Post('stats/compute')
   @UseGuards(ApiKeyGuard)
   async computeStats() {
+    await this.trendingService.computeDaysOnChart();
     await this.trendingService.computeDailyStats();
     return { computed: true };
   }

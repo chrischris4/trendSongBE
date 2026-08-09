@@ -57,12 +57,41 @@ export class TrendingService implements OnModuleInit {
     // Le calcul des statistiques ne doit jamais faire echouer la synchronisation :
     // les releves du jour sont deja en base a ce stade.
     try {
+      await this.computeDaysOnChart();
       await this.computeDailyStats();
     } catch (e) {
       this.logger.error(`Statistiques quotidiennes non calculées : ${(e as Error).message}`);
     }
     this.cache.clear();
     this.logger.log(`Synchronisation terminée — ${total} entrées`);
+  }
+
+  /**
+   * Anciennete de chaque titre du releve du jour, en jours distincts passes
+   * dans ce classement.
+   *
+   * Apple affiche un rang, jamais depuis combien de temps un titre s'y
+   * accroche. La valeur est ecrite sur les lignes du dernier relevé en une
+   * seule instruction, pour que la lecture reste un simple SELECT.
+   */
+  async computeDaysOnChart() {
+    const updated = await this.prisma.$executeRaw`
+      WITH tenure AS (
+        SELECT "countryCode", "type", "appleId",
+               COUNT(DISTINCT ("fetchedAt" AT TIME ZONE 'UTC')::date)::int AS days
+        FROM trending_tracks
+        GROUP BY "countryCode", "type", "appleId"
+      )
+      UPDATE trending_tracks t
+      SET "daysOnChart" = tenure.days
+      FROM tenure
+      WHERE t."countryCode" = tenure."countryCode"
+        AND t."type" = tenure."type"
+        AND t."appleId" = tenure."appleId"
+        AND (t."fetchedAt" AT TIME ZONE 'UTC')::date =
+            (SELECT MAX(("fetchedAt" AT TIME ZONE 'UTC')::date) FROM trending_tracks)`;
+
+    this.logger.log(`Anciennete calculée pour ${updated} entrées`);
   }
 
   /**
