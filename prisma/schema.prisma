@@ -84,18 +84,14 @@ model BlogArticle {
   appleId      String?
   type         String? // "songs" or "albums"
   title        String
-  titleFr      String?
   titleEn      String?
   artistName   String
   artworkUrl   String?
   streamCount  BigInt?
   countryCount Int?
   weekOf       DateTime
-  editorialFr  String            @db.Text
   editorialEn  String            @db.Text
-  introFr      String?           @db.Text
   introEn      String?           @db.Text
-  conclusionFr String?           @db.Text
   conclusionEn String?           @db.Text
   published    Boolean           @default(true)
   createdAt    DateTime          @default(now())
@@ -115,9 +111,7 @@ model BlogArticleItem {
   artworkUrl     String?
   streamCount    BigInt?
   countryCount   Int?
-  sectionTitleFr String?
   sectionTitleEn String?
-  sectionTextFr  String?     @db.Text
   sectionTextEn  String?     @db.Text
   article        BlogArticle @relation(fields: [articleId], references: [id], onDelete: Cascade)
 
