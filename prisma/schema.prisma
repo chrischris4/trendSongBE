@@ -190,3 +190,25 @@ model WeeklyReportItem {
   @@index([appleId])
   @@map("weekly_report_items")
 }
+
+// Portee globale d'un titre sur toute la fenetre conservee, recalculee une fois
+// par jour apres la synchronisation. Sans cette table, declarer les fiches dans
+// le sitemap imposerait un GROUP BY sur les ~600 000 lignes de trending_tracks
+// a chaque passage de crawler — exactement ce que DailyChartStat evite deja
+// pour les statistiques. Les seuils d'indexation ne sont volontairement PAS
+// figes ici : ils restent parametres par l'appelant, seule la mesure est
+// precalculee.
+model TrackReach {
+  appleId      String
+  type         String // "songs" ou "albums"
+  name         String
+  artistName   String
+  daysOnChart  Int // jours distincts, tous pays confondus
+  countryCount Int // pays distincts sur la fenetre conservee
+  lastSeen     DateTime
+  computedAt   DateTime @default(now())
+
+  @@id([appleId, type])
+  @@index([daysOnChart, countryCount])
+  @@map("track_reach")
+}

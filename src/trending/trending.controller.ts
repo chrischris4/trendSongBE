@@ -30,6 +30,7 @@ export class TrendingController {
   async computeStats() {
     await this.trendingService.computeDaysOnChart();
     await this.trendingService.computeDailyStats();
+    await this.trendingService.computeTrackReach();
     return { computed: true };
   }
 

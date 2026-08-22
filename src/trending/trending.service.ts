@@ -59,6 +59,7 @@ export class TrendingService implements OnModuleInit {
     try {
       await this.computeDaysOnChart();
       await this.computeDailyStats();
+      await this.computeTrackReach();
     } catch (e) {
       this.logger.error(`Statistiques quotidiennes non calculées : ${(e as Error).message}`);
     }
@@ -179,33 +180,57 @@ export class TrendingService implements OnModuleInit {
     this.logger.log(`Statistiques quotidiennes calculées pour ${rows.length} classements`);
   }
 
-  // Meme definition que getTrackHistory : `daysOnChart` compte les jours
-  // distincts tous pays confondus, `countryCount` les pays distincts sur toute
-  // la fenetre conservee. La colonne TrendingTrack.daysOnChart ne convient pas
-  // ici : elle mesure une tenure par pays, pas la presence globale.
+  /**
+   * Portee globale de chaque titre, ecrite dans track_reach. Memes definitions
+   * que getTrackHistory : `daysOnChart` compte les jours distincts tous pays
+   * confondus, `countryCount` les pays distincts sur la fenetre conservee. La
+   * colonne TrendingTrack.daysOnChart ne convient pas ici, elle mesure une
+   * tenure par pays et non la presence globale.
+   *
+   * C'est la seule agregation sur la fenetre complete, et elle appartient au
+   * cron : aucune requete visiteur ne doit la declencher.
+   */
+  async computeTrackReach() {
+    // Reecriture complete plutot qu'un upsert : un titre sorti de la fenetre de
+    // retention doit disparaitre de la table, sinon le sitemap continuerait a
+    // declarer des fiches qui renvoient desormais 404.
+    await this.prisma.$transaction([
+      this.prisma.$executeRaw`DELETE FROM track_reach`,
+      this.prisma.$executeRaw`
+        INSERT INTO track_reach
+          ("appleId", "type", "name", "artistName", "daysOnChart", "countryCount", "lastSeen", "computedAt")
+        SELECT "appleId", "type",
+               MIN("name"), MIN("artistName"),
+               COUNT(DISTINCT DATE("fetchedAt"))::int,
+               COUNT(DISTINCT "countryCode")::int,
+               MAX("fetchedAt"), NOW()
+        FROM trending_tracks
+        GROUP BY "appleId", "type"`,
+    ]);
+    const n = await this.prisma.trackReach.count();
+    this.logger.log(`Portee des titres recalculee : ${n} fiches`);
+  }
+
+  // Lecture indexee sur quelques milliers de lignes. Les seuils restent des
+  // parametres : c'est le front qui decide ce qu'il marque robots.index, et le
+  // sitemap doit dire exactement la meme chose.
   async getIndexableTracks(minDays: number, minCountries: number) {
-    return this.prisma.$queryRaw<
-      {
-        appleId: string;
-        type: string;
-        name: string;
-        artistName: string;
-        daysOnChart: number;
-        countryCount: number;
-        lastSeen: Date;
-      }[]
-    >`
-      SELECT "appleId", "type",
-             MIN("name")                              AS name,
-             MIN("artistName")                        AS "artistName",
-             COUNT(DISTINCT DATE("fetchedAt"))::int   AS "daysOnChart",
-             COUNT(DISTINCT "countryCode")::int       AS "countryCount",
-             MAX("fetchedAt")                         AS "lastSeen"
-      FROM trending_tracks
-      GROUP BY "appleId", "type"
-      HAVING COUNT(DISTINCT DATE("fetchedAt")) >= ${minDays}
-         AND COUNT(DISTINCT "countryCode") >= ${minCountries}
-      ORDER BY COUNT(DISTINCT "countryCode") DESC`;
+    return this.prisma.trackReach.findMany({
+      where: {
+        daysOnChart: { gte: minDays },
+        countryCount: { gte: minCountries },
+      },
+      orderBy: [{ countryCount: 'desc' }, { daysOnChart: 'desc' }],
+      select: {
+        appleId: true,
+        type: true,
+        name: true,
+        artistName: true,
+        daysOnChart: true,
+        countryCount: true,
+        lastSeen: true,
+      },
+    });
   }
 
   // Simple lecture des lignes precalculees, sans aucune agregation.
