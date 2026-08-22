@@ -23,24 +23,24 @@ enum BlogArticleFormat {
 // declenchee par une requete visiteur, ce qui garde la RAM Postgres plate.
 // Une ligne par pays ET par type, songs et albums etant deux classements distincts.
 model DailyChartStat {
-  id               Int      @id @default(autoincrement())
-  day              DateTime @db.Date
-  countryCode      String
-  type             String // "songs" ou "albums"
-  entriesTotal     Int // taille du releve du jour
-  newEntries       Int // titres absents du releve de la veille
-  droppedOut       Int // titres presents la veille et absents aujourd'hui
-  churnPct         Int // part renouvelee du classement, en %
-  uniqueArtists    Int
-  topGainerId      String?
-  topGainerName    String?
-  topGainerArtist  String?
-  topGainerDelta   Int? // gain de rang par rapport a la veille
-  topTenureId      String?
-  topTenureName    String?
-  topTenureArtist  String?
-  topTenureDays    Int? // jours de presence sur la fenetre conservee
-  computedAt       DateTime @default(now())
+  id              Int      @id @default(autoincrement())
+  day             DateTime @db.Date
+  countryCode     String
+  type            String // "songs" ou "albums"
+  entriesTotal    Int // taille du releve du jour
+  newEntries      Int // titres absents du releve de la veille
+  droppedOut      Int // titres presents la veille et absents aujourd'hui
+  churnPct        Int // part renouvelee du classement, en %
+  uniqueArtists   Int
+  topGainerId     String?
+  topGainerName   String?
+  topGainerArtist String?
+  topGainerDelta  Int? // gain de rang par rapport a la veille
+  topTenureId     String?
+  topTenureName   String?
+  topTenureArtist String?
+  topTenureDays   Int? // jours de presence sur la fenetre conservee
+  computedAt      DateTime @default(now())
 
   @@unique([day, countryCode, type])
   @@index([countryCode, type, day])
@@ -118,4 +118,75 @@ model BlogArticleItem {
   @@unique([articleId, position])
   @@index([appleId])
   @@map("blog_article_items")
+}
+
+// Bilan hebdomadaire, genere le lundi matin pour la semaine ecoulee.
+// Les chiffres sont FIGES a la generation : ils agregent les DailyChartStat
+// de la semaine et ne sont jamais recalcules ensuite, sinon la page d'une
+// semaine de mars se reafficherait avec les valeurs du jour.
+model WeeklyReport {
+  id        Int      @id @default(autoincrement())
+  slug      String   @unique // "2026-w34"
+  weekStart DateTime @db.Date // lundi
+  weekEnd   DateTime @db.Date // dimanche
+
+  // Renouvellement moyen de la semaine, tous pays et types confondus, plus
+  // celui de la semaine precedente pour que la page affiche une variation
+  // plutot qu'un chiffre isole.
+  churnAvg      Int
+  churnPrev     Int?
+  newEntries    Int // cumul des entrees de la semaine
+  droppedOut    Int
+  uniqueArtists Int // moyenne d'artistes distincts par classement
+
+  // Marches extremes de la semaine.
+  mostStableCountry   String?
+  mostStableChurn     Int?
+  mostVolatileCountry String?
+  mostVolatileChurn   Int?
+
+  // Faits marquants, retenus sur l'ensemble des releves de la semaine.
+  topGainerId      String?
+  topGainerName    String?
+  topGainerArtist  String?
+  topGainerDelta   Int?
+  topGainerCountry String?
+  topTenureId      String?
+  topTenureName    String?
+  topTenureArtist  String?
+  topTenureDays    Int?
+
+  // Accroche courte, tronquee sur la page d'accueil.
+  headline    String             @db.Text
+  // Nombre de jours de releve reellement disponibles : l'archive a demarre le
+  // 10/08/2026, les premieres semaines sont donc partielles et la page doit
+  // pouvoir le dire au lieu de laisser croire a une semaine complete.
+  daysCovered Int
+  published   Boolean            @default(true)
+  createdAt   DateTime           @default(now())
+  items       WeeklyReportItem[]
+
+  @@index([weekStart])
+  @@map("weekly_reports")
+}
+
+// Titres marquants de la semaine : ceux presents dans le plus de pays sur la
+// periode. C'est une mesure d'etendue geographique, impossible a lire sur un
+// releve unique.
+model WeeklyReportItem {
+  id           Int          @id @default(autoincrement())
+  reportId     Int
+  position     Int
+  appleId      String
+  type         String // "songs" ou "albums"
+  name         String
+  artistName   String
+  artworkUrl   String?
+  countryCount Int // nombre de pays ou le titre a ete releve dans la semaine
+  bestRank     Int // meilleur rang atteint, tous pays confondus
+  report       WeeklyReport @relation(fields: [reportId], references: [id], onDelete: Cascade)
+
+  @@unique([reportId, position])
+  @@index([appleId])
+  @@map("weekly_report_items")
 }
