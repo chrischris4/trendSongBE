@@ -38,6 +38,21 @@ export class TrendingController {
     return this.trendingService.getStats();
   }
 
+  // Fiches dont la trajectoire est assez fournie pour meriter d'etre indexees.
+  // Les seuils sont fournis par l'appelant plutot que codes ici : c'est le
+  // front qui decide ce qu'il marque robots.index, et le sitemap doit dire
+  // exactement la meme chose. Deux constantes separees finiraient par deriver.
+  @Get('indexable')
+  getIndexable(
+    @Query('minDays') minDays: string = '14',
+    @Query('minCountries') minCountries: string = '3',
+  ) {
+    return this.trendingService.getIndexableTracks(
+      parseInt(minDays) || 14,
+      parseInt(minCountries) || 3,
+    );
+  }
+
   // Trajectoire d'un titre : pic, duree de presence, pays traverses.
   @Get('history/:appleId')
   async getHistory(@Param('appleId') appleId: string) {

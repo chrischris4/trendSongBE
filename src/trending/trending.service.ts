@@ -179,6 +179,35 @@ export class TrendingService implements OnModuleInit {
     this.logger.log(`Statistiques quotidiennes calculées pour ${rows.length} classements`);
   }
 
+  // Meme definition que getTrackHistory : `daysOnChart` compte les jours
+  // distincts tous pays confondus, `countryCount` les pays distincts sur toute
+  // la fenetre conservee. La colonne TrendingTrack.daysOnChart ne convient pas
+  // ici : elle mesure une tenure par pays, pas la presence globale.
+  async getIndexableTracks(minDays: number, minCountries: number) {
+    return this.prisma.$queryRaw<
+      {
+        appleId: string;
+        type: string;
+        name: string;
+        artistName: string;
+        daysOnChart: number;
+        countryCount: number;
+        lastSeen: Date;
+      }[]
+    >`
+      SELECT "appleId", "type",
+             MIN("name")                              AS name,
+             MIN("artistName")                        AS "artistName",
+             COUNT(DISTINCT DATE("fetchedAt"))::int   AS "daysOnChart",
+             COUNT(DISTINCT "countryCode")::int       AS "countryCount",
+             MAX("fetchedAt")                         AS "lastSeen"
+      FROM trending_tracks
+      GROUP BY "appleId", "type"
+      HAVING COUNT(DISTINCT DATE("fetchedAt")) >= ${minDays}
+         AND COUNT(DISTINCT "countryCode") >= ${minCountries}
+      ORDER BY COUNT(DISTINCT "countryCode") DESC`;
+  }
+
   // Simple lecture des lignes precalculees, sans aucune agregation.
   async getDailyStats(countryCode: string, type: 'songs' | 'albums', days = 7) {
     return this.prisma.dailyChartStat.findMany({
